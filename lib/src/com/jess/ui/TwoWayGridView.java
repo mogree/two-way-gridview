@@ -613,6 +613,10 @@ public class TwoWayGridView extends TwoWayAbsListView {
 		}
 	}
 
+    public int getHorizontalSpacing() {
+        return mHorizontalSpacing;
+    }
+
 
 	/**
 	 * Set the amount of vertical (y) spacing to place between each item
@@ -663,6 +667,10 @@ public class TwoWayGridView extends TwoWayAbsListView {
 		}
 	}
 
+    public int getColumnWidth() {
+        return mColumnWidth;
+    }
+
 	/**
 	 * Set the height of rows in the grid.  (Only used in horizontal scroll mode)
 	 *
@@ -690,6 +698,10 @@ public class TwoWayGridView extends TwoWayAbsListView {
 			requestLayoutIfNecessary();
 		}
 	}
+
+    public int getNumColumns() {
+        return mNumColumns;
+    }
 
 	/**
 	 * Set the number of rows in the grid
