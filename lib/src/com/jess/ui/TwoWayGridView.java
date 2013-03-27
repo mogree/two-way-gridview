@@ -634,6 +634,10 @@ public class TwoWayGridView extends TwoWayAbsListView {
 		}
 	}
 
+    public int getVerticalSpacing() {
+        return mVerticalSpacing;
+    }
+
 	/**
 	 * Control how items are stretched to fill their space.
 	 *
