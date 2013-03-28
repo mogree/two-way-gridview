@@ -105,12 +105,12 @@ public class TwoWayGridView extends TwoWayAbsListView {
 		TypedArray a = context.obtainStyledAttributes(attrs,
 				R.styleable.TwoWayGridView, defStyle, 0);
 
-		int hSpacing = a.getDimensionPixelOffset(
-				R.styleable.TwoWayGridView_horizontalSpacing, 0);
+		int hSpacing = Math.round(a.getDimension(
+				R.styleable.TwoWayGridView_horizontalSpacing, 0));
 		setHorizontalSpacing(hSpacing);
 
-		int vSpacing = a.getDimensionPixelOffset(
-				R.styleable.TwoWayGridView_verticalSpacing, 0);
+		int vSpacing = Math.round(a.getDimension(
+				R.styleable.TwoWayGridView_verticalSpacing, 0));
 		setVerticalSpacing(vSpacing);
 
 		int index = a.getInt(R.styleable.TwoWayGridView_stretchMode, STRETCH_COLUMN_WIDTH);
@@ -118,12 +118,12 @@ public class TwoWayGridView extends TwoWayAbsListView {
 			setStretchMode(index);
 		}
 
-		int columnWidth = a.getDimensionPixelOffset(R.styleable.TwoWayGridView_columnWidth, -1);
+		int columnWidth = Math.round(a.getDimension(R.styleable.TwoWayGridView_columnWidth, -1));
 		if (columnWidth > 0) {
 			setColumnWidth(columnWidth);
 		}
 
-		int rowHeight = a.getDimensionPixelOffset(R.styleable.TwoWayGridView_rowHeight, -1);
+		int rowHeight = Math.round(a.getDimension(R.styleable.TwoWayGridView_rowHeight, -1));
 		if (rowHeight > 0) {
 			setRowHeight(rowHeight);
 		}
