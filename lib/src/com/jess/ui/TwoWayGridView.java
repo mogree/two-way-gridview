@@ -64,7 +64,7 @@ public class TwoWayGridView extends TwoWayAbsListView {
 	public static final int AUTO_FIT = -1;
 
 	public static final String TAG = "TwoWayGridView";
-	public static final boolean DEBUG = false;
+	public static final boolean DEBUG = true;
 
 	private int mNumColumns = AUTO_FIT;
 	private int mNumRows = AUTO_FIT;
@@ -1616,12 +1616,12 @@ public class TwoWayGridView extends TwoWayAbsListView {
 			int heightSize = MeasureSpec.getSize(heightMeasureSpec);
 			if (DEBUG) Log.i(TAG, "vertical onMeasure heightMode: " + heightMode);
 			if (widthMode == MeasureSpec.UNSPECIFIED) {
-				if (mColumnWidth > 0) {
-					widthSize = mColumnWidth + mListPadding.left + mListPadding.right;
-				} else {
-					widthSize = mListPadding.left + mListPadding.right;
-				}
-				widthSize += getVerticalScrollbarWidth();
+				if (mNumColumns > 0) {
+                    widthSize = mColumnWidth*mNumColumns + mHorizontalSpacing*(mNumColumns-1) + mListPadding.left + mListPadding.right;
+                } else {
+                    widthSize = mListPadding.left + mListPadding.right;
+                }
+                widthSize += getVerticalScrollbarWidth();
 			}
 
 			int childWidth = widthSize - mListPadding.left - mListPadding.right;
@@ -2865,8 +2865,8 @@ public class TwoWayGridView extends TwoWayAbsListView {
 			int heightSize = MeasureSpec.getSize(heightMeasureSpec);
 			if (DEBUG) Log.i(TAG, "horizontal onMeasure heightMode: " + heightMode);
 			if (heightMode == MeasureSpec.UNSPECIFIED) {
-				if (mRowHeight > 0) {
-					heightSize = mRowHeight + mListPadding.top + mListPadding.bottom;
+				if (mNumRows > 0) {
+					heightSize = mRowHeight*mNumRows + mVerticalSpacing*(mNumRows-1) + mListPadding.top + mListPadding.bottom;
 				} else {
 					heightSize = mListPadding.top + mListPadding.bottom;
 				}
