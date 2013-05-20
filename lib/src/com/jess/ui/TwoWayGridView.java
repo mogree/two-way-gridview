@@ -64,7 +64,7 @@ public class TwoWayGridView extends TwoWayAbsListView {
 	public static final int AUTO_FIT = -1;
 
 	public static final String TAG = "TwoWayGridView";
-	public static final boolean DEBUG = true;
+	public static final boolean DEBUG = false;
 
 	private int mNumColumns = AUTO_FIT;
 	private int mNumRows = AUTO_FIT;
