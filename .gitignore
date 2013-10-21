@@ -19,6 +19,9 @@ target
 release.properties
 pom.xml.*
 
+#Gradle
+**/build/
+
 #Ant
 build.xml
 local.properties
