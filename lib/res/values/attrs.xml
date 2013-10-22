@@ -97,7 +97,7 @@
             <enum name="horizontal" value="1" />
         </attr>
     </declare-styleable>
-    
+
     <declare-styleable name="TwoWayGridView">
         <attr name="horizontalSpacing" format="dimension" />
         <attr name="verticalSpacing" format="dimension" />
@@ -117,5 +117,5 @@
         </attr>
         <attr name="gravity" />
     </declare-styleable>
-    
+
 </resources>
